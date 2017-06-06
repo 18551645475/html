@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <!--有一个数组$a=array(4,3,8,9,2),写一段程序将其重新排序并返回结果，按从小到大的顺序将其元素进行排序;-->
+ <div id="d1" style="width=200px;height:200px;"></div>
+  <script>
+      function bubbleSort(arr){
+        for(var r=1;r<arr.length;r++){
+          for(var i=0;i<arr.length-r;i++){
+              if(arr[i]>arr[i+1]){
+                  arr[i]+=arr[i+1];
+                  arr[i+1]=arr[i]-arr[i+1];
+                  arr[i]-=arr[i+1];
+              }
+          }
+      }
+  }
+      var $a=[4,3,8,9,2];
+      bubbleSort($a);
+      console.log($a);
+	  var d1=document.getElementById('d1');
+	  d1.innerHTML=($a);
+  </script>
+</body>
+</html>
